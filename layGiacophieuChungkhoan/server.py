@@ -45,9 +45,9 @@ def lay_chi_tiet(stock_symbol, stock_name):
 
 def main():
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server_socket.bind(('192.168.1.163', 99))
+    server_socket.bind(('0.0.0.0', 99))
     server_socket.listen(1)
-    print("Server đang chạy tại 192.168.1.163:99...")
+    print("🔄 Server đang chạy tại 0.0.0.0 Port:99...")
 
     while True:
         client_socket, addr = server_socket.accept()
@@ -67,7 +67,7 @@ if __name__ == "__main__":
     main()
     
 def start_server():
-    host = '192.168.1.163'
+    host = '0.0.0.0'
     port = 99
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:
         server_socket.bind((host, port))

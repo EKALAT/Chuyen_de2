@@ -4,7 +4,7 @@ def get_stock_price(stock_symbol, stock_name):
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     
     try:
-        client_socket.connect(('192.168.1.163', 99))
+        client_socket.connect(('127.0.0.1', 99))
         # Gửi mã chứng khoán và tên cổ phiếu cách nhau bằng dấu phẩy
         client_socket.send(f"{stock_symbol},{stock_name}".encode())
         
